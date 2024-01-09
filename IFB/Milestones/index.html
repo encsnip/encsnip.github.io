@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../DropDown/">
+        <link rel="prev" href="../ValidateDataEntry/">
       
       
-        <link rel="next" href="../ApplyTemplates/">
+        <link rel="next" href="../LoanAssociates/">
       
       
       <link rel="icon" href="../../assests/images/favicon.svg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Borrower Pairs - Enc Code Snippets</title>
+        <title>Milestones - Enc Code Snippets</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#borrower-pairs" class="md-skip">
+        <a href="#milestones" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Borrower Pairs
+              Milestones
             
           </span>
         </div>
@@ -832,30 +832,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Borrower Pairs
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../BorrowerPairs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,53 +844,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-field-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Get Field Value
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#set-field-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      Set Field Value
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -962,10 +895,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Milestones/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Milestones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -974,6 +927,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-milestone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Milestone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uncomplete-milestone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uncomplete Milestone
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1366,18 +1366,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-field-value" class="md-nav__link">
+  <a href="#complete-milestone" class="md-nav__link">
     <span class="md-ellipsis">
-      Get Field Value
+      Complete Milestone
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#set-field-value" class="md-nav__link">
+  <a href="#uncomplete-milestone" class="md-nav__link">
     <span class="md-ellipsis">
-      Set Field Value
+      Uncomplete Milestone
     </span>
   </a>
   
@@ -1398,11 +1398,32 @@
                   
 
 
-<h1 id="borrower-pairs">Borrower Pairs</h1>
+<h1 id="milestones">Milestones</h1>
 <h2 id="overview">Overview</h2>
-<p>We can loop over the borrower pairs in a loan object and get or set a field value for that specific pair using the BoarrowerPairs object.</p>
-<h2 id="get-field-value">Get Field Value</h2>
-<p>The below will get the borrowers name from a borrower pair that is not the currently selected borrower pair.</p>
+<p>The below provides information on how to complete/uncomplete milestones in a form event. We will also assign an associate to the milestone role. Make sure to test thoroughly when rolling milestones to make sure everything rolls as expected.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There are a couple of things to keep in mind when choosing to complete a milestone programmatically:</p>
+<ul>
+<li>This will finish the milestone and all milestones in between even if the user does not have permission to finish that milestone.</li>
+<li>The milestone completion date will be set to the date of when the rule was triggered, if milestones are skipped when finishing the milestone their completion dates will also be the trigger date.</li>
+<li>Unless we assign a user no users are assigned by default when a milestone is completed this way, this will leave milestone user roles unpopulated.</li>
+<li>Business rules such as Milestone Completion rules or Persona Access to Loan rules will not fire when a milestone is completed this way.</li>
+<li>The Started milestone will always be completed an cannot be uncompleted.</li>
+</ul>
+</div>
+<h2 id="complete-milestone">Complete Milestone</h2>
+<p>The below shows how to complete a milestone while adjusting the completion date to the day the code ran. It also updates the role of the loan associate for the next milestone.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After we complete the Milestone we call the AdjustDate method on our MilestoneEvent object to update the completion date which takes three arguments:</p>
+<ul>
+<li>newDate: This must be a valid date object, we use DateTime.Now to pass the current date to be used.</li>
+<li>allowAdjustPastMilestones: This is a boolean that when set to true will adjust past milestones expected completion dates to be adjusted based on the new date.</li>
+<li>allowAdjustFutureMilestones: This is a boolean that when set to true will adjust future milestones expected completion to be adjusted based on the new date.</li>
+</ul>
+<p>More information can be found on the MilestoneEvent.AdjustDate Method in the EncompassObjectsHelp.chm file.</p>
+</div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">VB</label><label for="__tabbed_1_2">C#</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1417,18 +1438,60 @@
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">&#39;First we check to see if there are more than</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c">&#39;one borrower pair</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">If</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">Then</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="c">&#39;Loop through each pair</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="k">For</span><span class="w"> </span><span class="k">Each</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">BorrowerPair</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="c">&#39;For each pair that isn&#39;t the current selected pair</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">        </span><span class="c">&#39;Get the borrowers first name</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">        </span><span class="k">If</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Current</span><span class="w"> </span><span class="k">Then</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="n">Msgbox</span><span class="p">(</span><span class="n">loan</span><span class="p">.</span><span class="n">Fields</span><span class="p">(</span><span class="s">&quot;4000&quot;</span><span class="p">).</span><span class="n">GetValueForBorrowerPair</span><span class="p">(</span><span class="n">pair</span><span class="p">))</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="k">Next</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">&#39;Get the user we are assigning to Milestone</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">Dim</span><span class="w"> </span><span class="n">assignUser</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">EllieMae</span><span class="p">.</span><span class="n">Encompass</span><span class="p">.</span><span class="n">BusinessObjects</span><span class="p">.</span><span class="n">Users</span><span class="p">.</span><span class="n">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loan</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">Users</span><span class="p">.</span><span class="n">GetUser</span><span class="p">(</span><span class="s">&quot;UserID&quot;</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c">&#39;Get the Processing Milestone</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c">&#39;Note that the Milestone name must match as it does in Encompass Settings</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">Dim</span><span class="w"> </span><span class="n">ms</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">Milestone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loan</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">Loans</span><span class="p">.</span><span class="n">Milestones</span><span class="p">.</span><span class="n">GetItemByName</span><span class="p">(</span><span class="s">&quot;Milestone Name&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c">&#39;Get the Milestone Event for the Processing Milestone</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">Dim</span><span class="w"> </span><span class="n">msEvnt</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">EllieMae</span><span class="p">.</span><span class="n">Encompass</span><span class="p">.</span><span class="n">BusinessObjects</span><span class="p">.</span><span class="n">Loans</span><span class="p">.</span><span class="n">Logging</span><span class="p">.</span><span class="n">MilestoneEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loan</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">MilestoneEvents</span><span class="p">.</span><span class="n">GetEventForMilestone</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c">&#39;Get the Milestone Event for the Next Milestone</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c">&#39;this will be used to update the role for that milestone</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="k">Dim</span><span class="w"> </span><span class="n">nxtMSEvnt</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">EllieMae</span><span class="p">.</span><span class="n">Encompass</span><span class="p">.</span><span class="n">BusinessObjects</span><span class="p">.</span><span class="n">Loans</span><span class="p">.</span><span class="n">Logging</span><span class="p">.</span><span class="n">MilestoneEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loan</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">MilestoneEvents</span><span class="p">.</span><span class="n">GetEventForMilestone</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">Next</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c">&#39;Check to see if Milestone has already been completed</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c">&#39;if it has not then complete the milestone,</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c">&#39;adjust the completion date and assign the</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c">&#39;loan associate for the next milestone</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">If</span><span class="w"> </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="c">&#39;Get the loan associate object for the next milestone role</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="k">Dim</span><span class="w"> </span><span class="n">lnAssociate</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">LoanAssociate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nxtMSEvnt</span><span class="p">.</span><span class="n">LoanAssociate</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="c">&#39;Only assign the new user is no associate has been</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="c">&#39;assigned already</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="n">lnAssociate</span><span class="p">.</span><span class="n">Assigned</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="w">  </span><span class="k">Then</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="n">lnAssociate</span><span class="p">.</span><span class="n">AssignUser</span><span class="p">(</span><span class="n">assignUser</span><span class="p">)</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="c">&#39;Complete the Processing Milestone</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="c">&#39;Adjust the expected completion date of the Processing Milestone</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">AdjustDate</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1446,27 +1509,71 @@
 <span class="normal"><a href="#__codelineno-1-12">12</a></span>
 <span class="normal"><a href="#__codelineno-1-13">13</a></span>
 <span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">//First we check to see if there are more than</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">//one borrower pair</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="c1">//Loop through each pair</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">BorrowerPair</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">)</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="c1">//For each pair that isn&#39;t the current selected pair</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">        </span><span class="c1">//Get the borrowers first name</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pair</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Current</span><span class="p">)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="n">Windows</span><span class="p">.</span><span class="n">Forms</span><span class="p">.</span><span class="n">MessageBox</span><span class="p">.</span><span class="n">Show</span><span class="p">(</span><span class="n">Loan</span><span class="p">.</span><span class="n">Fields</span><span class="p">[</span><span class="s">&quot;4000&quot;</span><span class="p">].</span><span class="n">GetValueForBorrowerPair</span><span class="p">(</span><span class="n">pair</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;Borrower Name&quot;</span><span class="p">);</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span>
+<span class="normal"><a href="#__codelineno-1-37">37</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">//Get the user we are assigning to Milestone</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">User</span><span class="w"> </span><span class="n">assignUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">Users</span><span class="p">.</span><span class="n">GetUser</span><span class="p">(</span><span class="s">&quot;UserID&quot;</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">//Get the Processing Milestone</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1">//Note that the Milestone name must match as it does in Encompass Settings</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">Milestone</span><span class="w"> </span><span class="n">ms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">Loans</span><span class="p">.</span><span class="n">Milestones</span><span class="p">.</span><span class="n">GetItemByName</span><span class="p">(</span><span class="s">&quot;Milestone Name&quot;</span><span class="p">);</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="c1">//Get the Milestone Event for the Processing Milestone</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="n">EllieMae</span><span class="p">.</span><span class="n">Encompass</span><span class="p">.</span><span class="n">BusinessObjects</span><span class="p">.</span><span class="n">Loans</span><span class="p">.</span><span class="n">Logging</span><span class="p">.</span><span class="n">MilestoneEvent</span><span class="w"> </span><span class="n">msEvnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">MilestoneEvents</span><span class="p">.</span><span class="n">GetEventForMilestone</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1">//Get the Milestone Event for the Next Milestone</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="c1">//this will be used to update the role for that milestone</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">EllieMae</span><span class="p">.</span><span class="n">Encompass</span><span class="p">.</span><span class="n">BusinessObjects</span><span class="p">.</span><span class="n">Loans</span><span class="p">.</span><span class="n">Logging</span><span class="p">.</span><span class="n">MilestoneEvent</span><span class="w"> </span><span class="n">nxtMSEvnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">MilestoneEvents</span><span class="p">.</span><span class="n">GetEventForMilestone</span><span class="p">(</span><span class="n">ms</span><span class="p">.</span><span class="n">Next</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="cm">/*</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="cm">* Check to see if Milestone has already been completed</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="cm">* if it has not then complete the milestone,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="cm">* adjust the completion date and assign the</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="cm">* loan associate for the next milestone</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="cm">*/</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">false</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="p">{</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="c1">//Get the loan associate object for the next milestone role</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">    </span><span class="n">LoanAssociate</span><span class="w"> </span><span class="n">lnAssociate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nxtMSEvnt</span><span class="p">.</span><span class="n">LoanAssociate</span><span class="p">;</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">    </span><span class="c1">//Only assign the new user is no associate has been</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="c1">//assigned already</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">lnAssociate</span><span class="p">.</span><span class="n">Assigned</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">false</span><span class="p">)</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">        </span><span class="n">lnAssociate</span><span class="p">.</span><span class="n">AssignUser</span><span class="p">(</span><span class="n">assignUser</span><span class="p">);</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="c1">//Complete the Processing Milestone</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">    </span><span class="c1">//Adjust the expected completion date of the Processing Milestone</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">AdjustDate</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
-<h2 id="set-field-value">Set Field Value</h2>
-<p>We can also set a pair specific field. Below shows how we can change the last name for a borrower that is not the current pair.</p>
+<h2 id="uncomplete-milestone">Uncomplete Milestone</h2>
+<p>Similar to how we can complete a milestone, the below demonstrates how we can uncomplete a milestone. Like with the complete milestone code we use the AdjustDate method to update the expected completion date, please see the note above on the arguments for the this method.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">VB</label><label for="__tabbed_2_2">C#</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1482,23 +1589,19 @@
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
 <span class="normal"><a href="#__codelineno-2-11">11</a></span>
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c">&#39;First we check to see if there are more than</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c">&#39;one borrower pair</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">If</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">Then</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="c">&#39;Loop through each pair</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="k">For</span><span class="w"> </span><span class="k">Each</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">BorrowerPair</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="c">&#39;For each pair that isn&#39;t the current selected pair</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="c">&#39;Get the borrowers first name</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="k">If</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Current</span><span class="w"> </span><span class="k">Then</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">            </span><span class="n">Loan</span><span class="p">.</span><span class="n">Fields</span><span class="p">(</span><span class="s">&quot;4002&quot;</span><span class="p">).</span><span class="n">SetValueForBorrowerPair</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LastName&quot;</span><span class="p">)</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="k">Next</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="c">&#39;Refresh BorrowerPairs after changes</span>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Refresh</span><span class="p">()</span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c">&#39;Get the Processing Milestone Event</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c">&#39;Note that the Milestone name must match as it does in Encompass Settings</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">Dim</span><span class="w"> </span><span class="n">msEvnt</span><span class="w"> </span><span class="ow">as</span><span class="w"> </span><span class="n">MilestoneEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loan</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">MilestoneEvents</span><span class="p">.</span><span class="n">GetEventForMilestone</span><span class="p">(</span><span class="s">&quot;Milestone Name&quot;</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c">&#39;Check to see if Milestone has already been completed</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c">&#39;if it has then uncomplete the milestone and</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c">&#39;adjust the completion date to 2 days from today</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">If</span><span class="w"> </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="c">&#39;Uncomplete Milestone</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="c">&#39;Adjust the expected completion date of the Milestone</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">AdjustDate</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">AddDays</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="k">false</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
@@ -1515,28 +1618,20 @@
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
 <span class="normal"><a href="#__codelineno-3-12">12</a></span>
 <span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">//First we check to see if there are more than</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">//one borrower pair</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1</span><span class="p">)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="c1">//Loop through each pair</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">BorrowerPair</span><span class="w"> </span><span class="n">pair</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">)</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="c1">//For each pair that isn&#39;t the current selected pair</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="c1">//Get the borrowers first name</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pair</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Current</span><span class="p">)</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">            </span><span class="n">Loan</span><span class="p">.</span><span class="n">Fields</span><span class="p">[</span><span class="s">&quot;4002&quot;</span><span class="p">].</span><span class="n">SetValueForBorrowerPair</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LastName&quot;</span><span class="p">);</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">}</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16"></a>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="c1">//Refresh BorrowerPairs after changes</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="n">Loan</span><span class="p">.</span><span class="n">BorrowerPairs</span><span class="p">.</span><span class="n">Refresh</span><span class="p">();</span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">//Get the Processing Milestone Event</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">//Note that the Milestone name must match as it does in Encompass Settings</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">MilestoneEvent</span><span class="w"> </span><span class="n">msEvnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Loan</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">MilestoneEvents</span><span class="p">.</span><span class="n">GetEventForMilestone</span><span class="p">(</span><span class="s">&quot;Milestone Name&quot;</span><span class="p">);</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1">//Check to see if Milestone has already been completed</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1">//if it has then uncomplete the milestone and</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1">//adjust the completion date to 2 days from today</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">true</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="c1">//Uncomplete Milestone</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">Completed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="c1">//Adjust the expected completion date of the Milestone</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="n">msEvnt</span><span class="p">.</span><span class="n">AdjustDate</span><span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">AddDays</span><span class="p">(</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="k">false</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">);</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
