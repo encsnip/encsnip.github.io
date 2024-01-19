@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1180,6 +1182,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#substrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substrings
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1431,6 +1442,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#substrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substrings
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1473,6 +1493,73 @@
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c">&#39;Set the field to Title Case</span>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="o">[</span><span class="mi">11</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ti</span><span class="p">.</span><span class="n">ToTitleCase</span><span class="p">(</span><span class="o">[</span><span class="mi">11</span><span class="o">]</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="substrings">Substrings</h2>
+<p>The Substring method can be called on a string to get a portion of that string. The diagram below breaks down the structure of a loan number we are using for these examples.</p>
+<div class="arithmatex">\[
+    \overbrace{
+        \underbrace{\LARGE 111}_\text{\small prefix}
+        \hspace{.25cm}
+        \underbrace{\LARGE 98765}_\text{\small auto number}
+    }^\text{\small full loan number}
+\]</div>
+<p>In the example below we can update the first 3 digits of the loan number to a prefix based on branch type (Net vs NonNet).</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c">&#39;If branch type is Net then update prefix</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c">&#39;to be 222 + LOS auto number</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">If</span><span class="w"> </span><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">BRANCH</span><span class="p">.</span><span class="n">TYPE</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Net&quot;</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="c">&#39;Substring is 0 based index, we start at the</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="c">&#39;index 3 character to only replace the 3 digit prefix</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="o">[</span><span class="mi">364</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;222&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="mi">364</span><span class="o">]</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c">&#39;Not a Net branch, update prefix to be</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c">&#39;111 + LOS auto number</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="k">Else</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="o">[</span><span class="mi">364</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;111&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">[</span><span class="mi">364</span><span class="o">]</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Substring also allows us to get only a portion of the string between two index numbers. The example below we reverse what we are doing and populate the CX.BRANCH.TYPE field to Net or NonNet based on the prefix of the loan number.</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c">&#39;Get the only the prefix of the loan number</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c">&#39;We start at index 0 and only go to index 3</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c">&#39;or the first three characters, keeping in</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c">&#39;mind that the index of the last character is</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c">&#39;not included</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="k">Dim</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="mi">364</span><span class="o">]</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c">&#39;If prefix is 111 then NonNet branch</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="k">If</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;111&quot;</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">BRANCH</span><span class="p">.</span><span class="n">TYPE</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;NonNet&quot;</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="c">&#39;Else if the prefix is 222 then Net branch</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="k">Else</span><span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="n">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;222&quot;</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">BRANCH</span><span class="p">.</span><span class="n">TYPE</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Net&quot;</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="c">&#39;Else unknown branch type</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="k">Else</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">BRANCH</span><span class="p">.</span><span class="n">TYPE</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Unknown&quot;</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
 </span></code></pre></div></td></tr></table></div>
 
 
@@ -1532,6 +1619,12 @@
     
     
       <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
       
     
   </body>
