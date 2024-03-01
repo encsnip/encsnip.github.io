@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../LockUnlockFields/">
+        <link rel="prev" href="../BorrowerPairs/">
       
       
-        <link rel="next" href="../Casting/">
+        <link rel="next" href="../Math/Arithmetic/">
       
       
       <link rel="icon" href="../../assests/images/favicon.svg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Working with Borrower Pairs - Enc Code Snippets</title>
+        <title>Casting Fields - Enc Code Snippets</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#working-with-borrower-pairs" class="md-skip">
+        <a href="#casting-fields" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Working with Borrower Pairs
+              Casting Fields
             
           </span>
         </div>
@@ -1150,6 +1150,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../BorrowerPairs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with Borrower Pairs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1166,7 +1187,7 @@
           
   
   <span class="md-ellipsis">
-    Working with Borrower Pairs
+    Casting Fields
   </span>
   
 
@@ -1177,7 +1198,7 @@
         
   
   <span class="md-ellipsis">
-    Working with Borrower Pairs
+    Casting Fields
   </span>
   
 
@@ -1208,18 +1229,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
+  <a href="#datetime" class="md-nav__link">
     <span class="md-ellipsis">
-      Code
+      DateTime
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DateTime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-date-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Date Cast
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#pre-233" class="md-nav__link">
+  <a href="#integerdecimal" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre 23.3
+      Integer/Decimal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integer/Decimal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-number-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Number Cast
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings
     </span>
   </a>
   
@@ -1229,27 +1289,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Casting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Casting Fields
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1414,18 +1453,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
+  <a href="#datetime" class="md-nav__link">
     <span class="md-ellipsis">
-      Code
+      DateTime
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DateTime">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-date-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Date Cast
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#pre-233" class="md-nav__link">
+  <a href="#integerdecimal" class="md-nav__link">
     <span class="md-ellipsis">
-      Pre 23.3
+      Integer/Decimal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integer/Decimal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-number-cast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Number Cast
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strings
     </span>
   </a>
   
@@ -1446,80 +1524,144 @@
                   
 
 
-<h1 id="working-with-borrower-pairs">Working with Borrower Pairs</h1>
+<h1 id="casting-fields">Casting Fields</h1>
 <h2 id="overview">Overview</h2>
-<p>There may be times that we need to loop through the fields of all borrower pairs on a loan and take action either on tha borrower pair or update a field based on if a condition is meet. We can do this by looping through our borrowers and using an index with the field ID to accomplish this. A field with an index looks like a normal field but has a # after teh field ID, for example [4000#2] is the borrowers first name from the loans second borrower pair.</p>
-<h2 id="code">Code</h2>
-<p>Something like below looks at each borrowers last name and if it matches a value then it updates that borrowers first name.</p>
-<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">&#39;Bypass PAF rule</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">IgnoreValidationErrors</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c">&#39;Loop through the borrower paris starting at index 1 and going</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c">&#39;to max borrower pair which is stored in field 4460</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="k">For</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">To</span><span class="w"> </span><span class="o">[</span><span class="mi">4460</span><span class="o">]</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="c">&#39;We use Fields here to get the field information so that we</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c">&#39;can concatinate the index value</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="n">Fields</span><span class="p">(</span><span class="s">&quot;4002#&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LastName&quot;</span><span class="w"> </span><span class="k">Then</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="c">&#39;We can use the same index to update fields for</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="c">&#39;that borrower pair</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="n">Fields</span><span class="p">(</span><span class="s">&quot;4000#&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;FirstName&quot;</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="k">Next</span>
-</span></code></pre></div></td></tr></table></div>
+<p>When working with fields in a business rule there are times where we need to make sure that we are working with the expected data type. While Encompass will try to return the correct data type based on teh field type when just using square brackets, sometimes we need to change that data type to work with or for comparison. Using casting we can change one data type into another. The table below shows the modifiers to add to the field along with the data type returned.</p>
+<table>
+<thead>
+<tr>
+<th>Modifier</th>
+<th>Data Type Returned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@</td>
+<td>DateTime</td>
+</tr>
+<tr>
+<td>#</td>
+<td>Integer/Decimal</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Unformatted String</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Formatted String</td>
+</tr>
+</tbody>
+</table>
+<p>Below are examples of casting that can be used not only in field trigger rules but in conditions and advanced code of other rule types.</p>
+<h2 id="datetime">DateTime</h2>
+<p>The At Sign (<strong><em>@</em></strong>) can be used to cast an field to a date if possible. Example of this would be [@CX.MY.DATETIME] where we are casting the value of the custom field CX.MY.DATETIME to a date type.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Up until Encompass release 23.3 field 4460 had a issue where it would not update to the actual borrower count until the loan was saved and reopened. ICE has fixed this and this field should now have an accurate count of borrowers.</p>
+<p>If the value of the field being cast cannot be parsed into a valid date the value returned would be 1/1/0001 12:00:00 AM</p>
 </div>
-<h2 id="pre-233">Pre 23.3</h2>
-<p>Before Encompass release 23.3 field 4460 could contain an inaccurate count of borrower pairs. To get around this we could use very similar code but needed to look at a field to validate that the borrower pair had data in it before running our other code. The below code does the same but instead of using 4460 it assumes the max number of pairs, which is 6, and before running our update code it first checks to see if the borrowers first name in that pair has a value.</p>
-<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c">&#39;Bypass PAF rule</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">IgnoreValidationErrors</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c">&#39;Loop through the borrower paris starting at index 1 and going</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c">&#39;to max borrower pair which is 6</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">For</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">As</span><span class="w"> </span><span class="kt">Integer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="k">To</span><span class="w"> </span><span class="mi">6</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="c">&#39;Check to see if borrower first name is in the loan before</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="c">&#39;trying to update</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="n">Fields</span><span class="p">(</span><span class="s">&quot;4000#&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="k">Nothing</span><span class="w"> </span><span class="k">Then</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">        </span><span class="c">&#39;We use Fields here to get the field information so that we</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="c">&#39;can concatinate the index value</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="k">If</span><span class="w"> </span><span class="n">Fields</span><span class="p">(</span><span class="s">&quot;4002#&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;LastName&quot;</span><span class="w"> </span><span class="k">Then</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">            </span><span class="c">&#39;We can use the same index to update fields for</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">            </span><span class="c">&#39;that borrower pair</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">            </span><span class="n">Fields</span><span class="p">(</span><span class="s">&quot;4000#&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;FirstName&quot;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="k">End</span><span class="w"> </span><span class="k">If</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="k">Next</span>
+<h3 id="example-date-cast">Example Date Cast</h3>
+<p>For the example below we are going to assume that the CX.MY.DATETIME field is setup as a string data type so that it can capture both the date and time that a button was clicked on a form. If we tried to check to see if the field was after a certain date by just using [CX.MY.DATETIME] an runtime error would occur trying to convert a string to a date. We can fix this with the @ modifier to cast CX.MY.DATETIME to a date.</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c">&#39;Check to see if date time is after first of year</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">If</span><span class="w"> </span><span class="o">[</span><span class="err">@</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DATETIME</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="p">#</span><span class="mi">01</span><span class="o">/</span><span class="mi">01</span><span class="o">/</span><span class="mi">2024</span><span class="p">#</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="c">&#39;do something here</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We can also check to see if the field has a date by using the IsDate function. Note that when doing this we do not want the cast, because if we did then if the fields value could not be parsed to a date it would default to 01/01/0001 which would causing IsDate to always return True.</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c">&#39;Check to see if field has date</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">If</span><span class="w"> </span><span class="n">IsDate</span><span class="p">(</span><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DATETIME</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="c">&#39;do something based on having date</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="integerdecimal">Integer/Decimal</h2>
+<p>The Number sign (<strong><em>#</em></strong>) can be used cast a field to a integer or decimal if possible. If we wanted to cast the CX.MY.NUMBER field to a integer or a decimal we would use this [#CX.MY.NUMBER]. In this example if CX.MY.NUMBER was the string 2 then the integer 2 would be returned, while if the value was the string 2.0 then the decimal 2.0 would be returned. This can be handy when comparing fields or functions/math that require a numeric data type.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the value of the field being cast cannot be parsed into a valid integer or decimal the value returned would be 0</p>
+</div>
+<h3 id="example-number-cast">Example Number Cast</h3>
+<p>For the example below we are going to assume that the CX.MY.NUMBER field is setup as a string data type. If we tried to use the value just from the [CX.MY.NUMBER] call we could end up with a runtime error trying to convert a string to a number. We can fix this with the # modifier to cast CX.MY.NUMBER to a integer or decimal.</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c">&#39;Check to see if my number is greater than 2</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">If</span><span class="w"> </span><span class="o">[</span><span class="p">#</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">NUMBER</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="c">&#39;do something</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We can also check to see if the field's value is integer or decimal by using the IsNumeric function. Note that when doing this we do not want to use the cast because if we did then if the fields value could nto be parsed to a integer or decimal it would default to 0 which would cause IsNumeric to always return True.</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c">&#39;Check to see if field is a number</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">If</span><span class="w"> </span><span class="n">IsNumeric</span><span class="p">(</span><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">NUMBER</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="c">&#39;do something based on being a number</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="strings">Strings</h2>
+<p>There are two modifiers that can be used to retrieve the formatted and unformatted value of a field. The Minus sign (<strong><em>-</em></strong>) returns the unformatted string, while the Plus sign (<strong><em>+</em></strong>) retruns the formatted string. The data type returned for both of these is the string data type. The below shows an example of these cast being used and the resulting string.</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c">&#39;Original value in the CX.MY.DECIMAL field is 46,000.23</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[+</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DECIMAL</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 46,000.23</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[-</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DECIMAL</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 46000.23</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c">&#39;Original value in the CX.MY.INTEGER field is 1,234</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[+</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">INTEGER</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 1,234</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[-</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">INTEGER</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 1234</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="c">&#39;Original value in the CX.MY.DATE field is 01/01/2024</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[+</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DATE</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 01/01/2024</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[-</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DATE</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 01/01/2024</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c">&#39;Original value in the CX.MY.DECIMAL field is 0</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[+</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DECIMAL</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 0.00</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING2</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[-</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DECIMAL</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 0.00</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="c">&#39;Original value in the CX.MY.INTEGER field is 0</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[+</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">INTEGER</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 0</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[-</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">INTEGER</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to 0</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="c">&#39;Original value in the CX.MY.DATE field is 01/01/2024</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[+</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DATE</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to //</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[-</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">DATE</span><span class="o">]</span><span class="w"> </span><span class="c">&#39;CX.MY.STRING set to blank</span>
+</span></code></pre></div></td></tr></table></div>
+<p>We can check for an empty or blank string by using the IsEmpty function. Based on the examples above the only cast that may help is to cast a date field using the minus sign (unformatted), that way if there was no date it would return an blank value (although the IsDate function may be safer). Below is an example of how to call the IsEmpty function.</p>
+<div class="language-vbnet highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c">&#39;Check to see if the field is blank</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">If</span><span class="w"> </span><span class="n">IsEmpty</span><span class="p">(</span><span class="o">[</span><span class="n">CX</span><span class="p">.</span><span class="n">MY</span><span class="p">.</span><span class="n">STRING</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="k">Then</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="c">&#39;do something based on being blank or empty</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">End</span><span class="w"> </span><span class="k">If</span>
 </span></code></pre></div></td></tr></table></div>
 
 
